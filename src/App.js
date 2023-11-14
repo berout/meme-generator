@@ -1,5 +1,6 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef } from 'react';
 import { exportComponentAsJPEG } from "react-component-export-image";
+import MetaTags from './components/MetaTags';
 import Inputs from './components/Inputs';
 import OutputText from './components/OutputText';
 import TextSize from './components/TextSize';
@@ -58,6 +59,7 @@ function App() {
 
   return (
     <main>
+      <MetaTags/>
       <h1>Meme generator</h1>
       <div className="meme-generator"  onDragOver={onDragOver}  onDragStart={onDragStart} onDrop={onDrop}>
         <div className="meme" ref={downloadImage}>
